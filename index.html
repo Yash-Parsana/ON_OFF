@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON OFF Light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div id="maincontainer">
+        <div id="div1">
+        <div id="shadow"></div>
+        <img id="img" src="off_bulb.png" alt="">
+        </div>
+        <div id="container">
+            <button id="on">ON</button>
+            <button id="off">OFF</button>
+        </div>
+    </div>
+    <script>
+        const on=document.getElementById("on");
+        const off=document.getElementById("off");
+        let img=document.getElementById('img');
+        let shadow =document.getElementById('shadow');
+        let bd=document.getElementById("body");
+        on.addEventListener('click',()=>{
+            img.src="on_bulb.png";
+        });    
+        on.addEventListener('click',()=>{
+            shadow.style.boxShadow =" -2px -2px 400px 200px rgba(232,249,0,0.75)";
+        });
+        on.addEventListener('click',()=>{
+            bd.style.backgroundColor="#1a0d00";
+        });
+        off.addEventListener('click',()=>{
+            img.src="off_bulb.png";
+        });
+        off.addEventListener('click',()=>{
+            shadow.style.boxShadow ="none";
+        });
+        off.addEventListener('click',()=>{
+            bd.style.backgroundColor="black";
+        });
+        
+    </script>
+</body>
+</html>
